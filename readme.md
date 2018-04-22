@@ -11,10 +11,10 @@
 ## Setting up a this app from github
 * clone from git using `$ git clone https://github.com/spell1612/dhisha-lite.git <foldername>` (Foldername optional. Defaults to repo name)
 * cd into folder with `$ cd <foldername>` or `$ cd dhisha-lite` by default
+* Setup your local environment (create a database etc...)
+* Enter your environment details in the .env file
 * create new env file by using `$ cp .env.example .env`
 * grab the dependancies with `$ composer update`
   - dependancies can be defined in the composer.json file
-* Setup your local environment (create a database etc...)
-* Enter your environment details in the .env file
 * Migrate the db schema using `$ php artisan migrate` (make sure databse is running)
 * `$ php artisan serve` to run the app at localhost:8000
