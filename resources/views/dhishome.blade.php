@@ -157,6 +157,25 @@
 										<option value="O-VE">O-</option>
 
 									</select>
+                  <label class="control-label">Location</label>
+                  <select placeholder="District" name="bgloc" class="form-control" required>
+                    <option disabled="" selected=""></option>
+                    <option value="...">Search All</option>
+                    <option value=AL>Alappuzha</option>
+                    <option value=ER>Ernakulam</option>
+                    <option value=ID>Idukki</option>
+                    <option value=KN>Kannur</option>
+                    <option value=KS>Kasaragod</option>
+                    <option value=KL>Kollam</option>
+                    <option value=KT>Kottayam</option>
+                    <option value=KZ>Kozhikode</option>
+                    <option value=MA>Malappuram</option>
+                    <option value=PL>Palakkad</option>
+                    <option value=PT>Pathanamthitta</option>
+                    <option value=TV>Thiruvananthapuram</option>
+                    <option value=TS>Thrissur</option>
+                    <option value=WA>Wayanad</option>
+                  </select>
 								</div>
 							</div>
 
@@ -196,7 +215,7 @@
 		<!-- blood donors modal ends -->
 
 		<!-- login form starts -->
-		
+
 		<!-- login form ends -->
 
     </div><!--  end container-->
