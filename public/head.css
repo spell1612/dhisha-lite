@@ -1,0 +1,90 @@
+.bg{
+	background:url(../images/head-bg.jpg) no-repeat 0px 0px;
+}
+
+.header {
+  padding: 0.8em 0 0;
+  background:none;
+	border:none;
+}
+.header-right{
+	color:#CAD1DB;
+	font-family: 'Open Sans', sans-serif;
+	font-size:1.5em;
+	text-align:right;
+}
+.header-right a{
+	text-decoration:none;
+}
+.header-right p i a{
+	margin-right: 1.2em;
+	color: #CAD1DB;
+	display: inline-block;
+}
+.header-right p i a:hover{
+	color:#67BF95;
+}
+
+.well{
+  background:none;
+	border:none;
+  padding:0;
+}
+
+.logo{
+	margin-top: 1em;
+  text-align: center;
+  padding:1em 0;
+}
+
+.login-info{
+  text-align:center;
+}
+
+.slide-banner {
+  text-align: center;
+}
+.slide-banner-left p {
+  color: #C5D2E5;
+  font-size: 1.5em;
+  width: 100%;
+  margin: 1em 0;
+}
+.slide-banner span{
+  margin-top:2%;
+  width: 200px;
+  height: 200px;
+  background: url(../images/slider-img.png) no-repeat 0px 0px;
+  display: inline-block;
+  background-size: 100%;
+}
+.slide-banner-right{
+  display:none;
+}
+.slide-banner-left h1 {
+  margin: 0;
+  font-size: 3.2em;
+}
+
+.slide-banner-left,.top-grid-center{
+  padding: 0;
+  margin: 0;
+}
+
+.slide-banner-left{
+	font-family: 'Enriqueta', serif;
+}
+.slide-banner-left h1{
+	color: #FFF;
+	font-size: 3.5em;
+}
+.slide-banner-left p{
+	color: #C5D2E5;
+	font-size: 1.5em;
+	width: 64%;
+	margin: 2em 0 2.5em;
+}
+
+.slide-banner{
+	padding: 3em 0 3em;
+}
