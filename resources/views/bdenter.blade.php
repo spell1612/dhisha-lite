@@ -84,9 +84,14 @@
                               <button type="submit" class="btn btn-primary">
                                   Save Data
                               </button>
+
                           </div>
+
                       </div>
                   </form>
+                </div>
+                <div class="col-md-6 offset-md-3">
+                    @include('flash::message')
                 </div>
             </div>
         </div>

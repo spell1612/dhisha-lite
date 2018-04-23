@@ -19,6 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <script>
+    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
 </head>
 <body>
     <div id="app">
@@ -83,5 +87,6 @@
             @yield('content')
         </main>
     </div>
+
 </body>
 </html>

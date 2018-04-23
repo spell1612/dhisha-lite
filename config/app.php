@@ -151,6 +151,7 @@ return [
          * Package Service Providers...
          */
         Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
         /*
          * Application Service Providers...
          */

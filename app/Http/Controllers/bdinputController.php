@@ -22,7 +22,9 @@ class bdinputController extends Controller
         $bd->place=$bdon->bdplace;
         $bd->phno=$bdon->bdphno;
         $bd->save();
-        return Redirect::to('/bdenter')->with('success', true)->with('message','Entry Successful!!');
+        flash('Save Successful!!')->success();
+
+        return back();
     }
 
 

@@ -28,24 +28,44 @@
         <div class="toolbar">
             <a href="/"><button  class="btn btn-default">DHISHA</button><a>
         </div>
-				{{$i=1;}}
+				@php $i=1;
+				@endphp
         <table id="fresh-table" class="table">
             <thead>
                 <th data-field="id">ID</th>
             	<th data-field="name" data-sortable="true">Name</th>
 							<th data-field="BloodG" data-sortable="true">Blood Group</th>
-            	<th data-field="salary" data-sortable="true">Mobile No.</th>
-            	<th data-field="city">City</th>
+            	<th data-field="city" data-sortable="true">City</th>
+							<th data-field="salary">Mobile No.</th>
             	<!-- <th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Actions</th> -->
             </thead>
             <tbody>
 							@foreach($bloodlist as $a)
 							<tr>
-								<td>{{echo $i; i++;}}</td>
+								<td>{{$i}} @php $i++; @endphp</td>
 								<td>{{$a->name}}</td>
 								<td>{{$a->bloodgroup}}</td>
+								<td>@php
+											switch($a->place)
+											{
+												case "AL":echo "Alappuzha";break;
+												case "ER":echo "Ernakulam";break;
+												case "ID":echo "Idukki";break;
+												case "KN":echo "Kannur";break;
+												case "KS":echo "Kasaragod";break;
+												case "KL":echo "Kollam";break;
+												case "KT":echo "Kottayam";break;
+												case "KZ":echo "Kozhikode";break;
+												case "MA":echo "Malappuram";break;
+												case "PL":echo "Palakkad";break;
+												case "PT":echo "Pathanamthitta";break;
+												case "TV":echo "Thiruvananthapuram";break;
+												case "TS":echo "Thrissur";break;
+												case "WA":echo "Wayanad";break;
+											}
+											@endphp
+								</td>
 								<td>{{$a->phno}}</td>
-								<td>{{$a->place}}</td>
 							</tr>
 							@endforeach
 				    </tbody>
@@ -81,7 +101,7 @@
                 showColumns: true,
                 pagination: true,
                 striped: true,
-                sortable: true,
+                sortable: false,
                 height: table_height,
                 pageSize: 25,
                 pageList: [25,50,100],
