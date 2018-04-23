@@ -9,10 +9,17 @@ class bdonoController extends Controller
 {
     //
     public function snd(Request $bg){
+      
+      if($bg->bgroup=="..." && $bg->bgloc=="...")
+        return view('donorlist',['bloodlist'=>donor::all()]);
+
       if($bg->bgroup=="...")
-       $bgvar=donor::all();
-      else
-       $bgvar=donor::where('bloodgroup','=',$bg->bgroup)->get();
+        return view('donorlist',['bloodlist'=>donor::where('bloodgroup','=',$bg->bgroup)->get()]);
+
+      if($bg->bgloc=="...")
+        return view('donorlist',['bloodlist'=>donor::where('place','=',$bg->bgloc)->get()]);
+
+      $bgvar=donor::where('bloodgroup','=',$bg->bgroup)->where('place','=',$bg->bgloc)->get();
 
       return view('donorlist',['bloodlist'=>$bgvar]);
     }

@@ -34,7 +34,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    @auth
+                     <li class="dropdown">
+                          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                              Admin <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a class="nav-link" href="{{ URL::to('/home') }}">Home</a></li>
+                              <li><a class="nav-link" href="{{ URL::to('/readfb') }}">Read Feedback</a></li>
+                              <li><a class="nav-link" href="{{ URL::to('/bdenter') }}">Enter Blood Donor</a></li>
 
+                          </ul>
+                      </li>
+                          @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

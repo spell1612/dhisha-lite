@@ -242,7 +242,7 @@
 
 					<h1 class="heroh1">HELP CHANGE A CHILD'S LIFE</h1>
 					<div><p class="heropara">All children have the right to a healthy, happy and fulfilling life. Donate Money & Support Charity to Keep children safe & free from harm.
-						<br/><br/><a href='/donate' ><button class="btn btn-info btn-round btn-fill" >DONATE</button></a></p>
+						<!-- <br/><br/><a href='/donate' ><button class="btn btn-info btn-round btn-fill" >DONATE</button></a></p> -->
 					</p>
 					</div>
 
@@ -567,7 +567,10 @@
 																				<p class="help-block text-danger"></p>
 																		</div>
 																		<div class="form-group">
-																				<div class="g-recaptcha" data-sitekey="6LetbxwUAAAAAPSFjCi2CCtRZMZoyIaP8jCTO9Mq"></div>
+                                      {!! Captcha::display( [
+                                                    'data-theme' => 'light',
+                                                    'data-type'	=>	'audio',
+                                              ]) !!}
 																				<p class="help-block text-danger"></p>
 																		</div>
 																		<!-- <div class="form-group">
@@ -682,7 +685,7 @@ Changuvetty, Kottakal</p>
 
 </body>
 
-		<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+		<!-- <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script> -->
     <script src="{{ asset('jquery/jquery-1.10.2.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/js/jquery-ui-1.10.4.custom.min.js') }}" type="text/javascript"></script>
 
@@ -695,13 +698,13 @@ Changuvetty, Kottakal</p>
 	<script src="{{ asset('assets/js/hipster-cards.js') }}"></script>
 
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	var CaptchaCallback = function() {
 		$('.g-recaptcha').each(function(index, el) {
 			grecaptcha.render(el, {'sitekey' : '6LetbxwUAAAAAPSFjCi2CCtRZMZoyIaP8jCTO9Mq'});
 		});
 	};
-	</script>
+	</script> -->
 
 <script type="text/javascript">
 
