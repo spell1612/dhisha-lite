@@ -1,5 +1,5 @@
 # dhisha-lite
-### A lighter more stable reimplementation of dhisha as seen at www.dhisha.in
+### A lighter more stable reimplementation of dhisha in Laravel 5.6 as seen at www.dhisha.in
 
 ### Requirements
 * [Composer](https://getcomposer.org/download/)
