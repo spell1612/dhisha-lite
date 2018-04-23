@@ -32,7 +32,7 @@
 	<link href="{{ asset('assets/css/gsdk.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/demo.css') }}" rel="stylesheet" />
 		<link href="{{ asset('css/logo.css') }}" rel="stylesheet" />
-
+      <link rel="stylesheet" type="text/css" data-bootloader-hash="29sAD" href="{{ asset('css/style.css') }}">
 		<!-- login links -->
 		<!-- <link href="{{ asset('login-register.css') }}" rel="stylesheet" />
 		<script src="{{ asset('login-register.js') }}" type="text/javascript"></script> -->
@@ -740,3 +740,8 @@ Changuvetty, Kottakal</p>
 
 </script>
 </html>
+<script>
+    $(document).ready(function(){
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+   });
+</script>

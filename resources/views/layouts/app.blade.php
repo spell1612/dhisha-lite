@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" data-bootloader-hash="29sAD" href="{{ asset('css/style.css') }}">
     <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <script>
     $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
@@ -90,3 +91,8 @@
 
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+   });
+</script>

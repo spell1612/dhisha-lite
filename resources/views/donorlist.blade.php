@@ -11,7 +11,7 @@
 
   	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/fresh-bootstrap-table.css') }}" rel="stylesheet" />
-
+		  <link rel="stylesheet" type="text/css" data-bootloader-hash="29sAD" href="{{ asset('css/style.css') }}">
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -167,3 +167,8 @@
     </script>
 
 </html>
+<script>
+    $(document).ready(function(){
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+   });
+</script>
