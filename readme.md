@@ -16,6 +16,7 @@
 * Enter your environment details in the .env file
 * grab the dependancies with `$ composer update`
   - dependancies can be defined in the composer.json file
+* From the root folder run `$ php artisan key:generate`
 * Migrate the db schema using `$ php artisan migrate` (make sure databse is running)
 * `$ php artisan serve` to run the app at localhost:8000
 
