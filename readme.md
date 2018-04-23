@@ -1,5 +1,5 @@
 # dhisha-lite
-### A lighter more stable reimplementation of dhisha
+### A lighter more stable reimplementation of dhisha as seen at www.dhisha.in
 
 ### Requirements
 * [Composer](https://getcomposer.org/download/)
@@ -11,10 +11,15 @@
 ## Setting up a this app from github
 * clone from git using `$ git clone https://github.com/spell1612/dhisha-lite.git <foldername>` (Foldername optional. Defaults to repo name)
 * cd into folder with `$ cd <foldername>` or `$ cd dhisha-lite` by default
+* create new env file by using `$ cp .env.example .env`
 * Setup your local environment (create a database etc...)
 * Enter your environment details in the .env file
-* create new env file by using `$ cp .env.example .env`
 * grab the dependancies with `$ composer update`
   - dependancies can be defined in the composer.json file
 * Migrate the db schema using `$ php artisan migrate` (make sure databse is running)
 * `$ php artisan serve` to run the app at localhost:8000
+
+
+Use `/home` route to access admin panel. Register with any random credentials to login **for now**.
+
+Give me a pull request if you wanna help add more features/fix bugs.
