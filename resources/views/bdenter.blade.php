@@ -84,7 +84,9 @@
                               <button type="submit" class="btn btn-primary">
                                   Save Data
                               </button>
-
+                              <a href='/donoradmin'><button type="button" class="btn btn-secondary">
+                                  Show Donor's List
+                              </button></a>
                           </div>
 
                       </div>

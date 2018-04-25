@@ -106,6 +106,9 @@
 								{{ csrf_field() }}
 						</form>
 						@endif -->
+            @auth
+            <li><a href="{{ route('home')}}" class="btn btn-round btn-default"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> ADMIN</a></li>
+            @endauth
 						<li><a href="#" class="btn btn-round btn-default" data-toggle="modal" data-target="#blModal"> <span class="glyphicon glyphicon-tint" aria-hidden="true"></span> Blood Donors</a></li>
 					</ul>
 
@@ -566,13 +569,13 @@
 																				<input type="email" class="form-control" name=fbemail placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
 																				<p class="help-block text-danger"></p>
 																		</div>
-																		<div class="form-group">
+																		<!-- <div class="form-group">
                                       {!! Captcha::display( [
                                                     'data-theme' => 'light',
                                                     'data-type'	=>	'audio',
                                               ]) !!}
 																				<p class="help-block text-danger"></p>
-																		</div>
+																		</div> -->
 																		<!-- <div class="form-group">
 																				<input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required="" data-validation-required-message="Please enter your phone number.">
 																				<p class="help-block text-danger"></p>
@@ -590,7 +593,7 @@
 																		<button type="submit" class="btn btn-fill btn-round btn-default">Send Message</button>
 																</div>
 														</div>
-
+                          	{{csrf_field()}}
 												</form>
 										</div>
 
@@ -652,11 +655,12 @@ Changuvetty, Kottakal</p>
 <div class="navigation">
 <h2 class="footer-title">Navigation</h2>
 <ul class="list-unstyled">
-	<li><a href="http://centerend.com/" title="">Home</a></li>
-	<li><a href="http://centerend.com/" title="">Donate</a></li>
-	<li><a href="http://centerend.com/" title="">Blood Donation</a></li>
-	<li><a href="http://centerend.com/" title="">News & Blog</a></li>
-	<li><a href="http://centerend.com/" title="">Contact Us</a></li>
+	<!-- <li><a href="/" title="">Home</a></li> -->
+	<!-- <li><a href="#Donate" title="">Donate</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">Blood Donation</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">News & Blog</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">Contact Us</a></li> -->
+  <li><a href="{{ route('home') }}" title="">ADMIN</a></li>
 	<!-- <li><a href="http://centerend.com/" title="">Career</a></li>
 	<li><a href="http://centerend.com/" title="">Sitemap</a></li>
 	<li><a href="http://centerend.com/" title="">Contact Us</a></li> -->

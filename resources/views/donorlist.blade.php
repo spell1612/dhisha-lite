@@ -27,6 +27,10 @@
 
         <div class="toolbar">
             <a href="/"><button  class="btn btn-default">DHISHA</button><a>
+						@auth
+						<a href="{{ route('home') }}"><button  class="btn btn-default">ADMIN</button><a>
+						<a href="{{ route('bdenter') }}"><button  class="btn btn-default">ENTER DONOR</button><a>
+						@endauth
         </div>
 				@php $i=1;
 				@endphp
@@ -37,6 +41,9 @@
 							<th data-field="BloodG" data-sortable="true">Blood Group</th>
             	<th data-field="city" data-sortable="true">City</th>
 							<th data-field="salary">Mobile No.</th>
+							@auth
+							<th data-field="action">Admin Action</th>
+							@endauth
             	<!-- <th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Actions</th> -->
             </thead>
             <tbody>
@@ -66,6 +73,11 @@
 											@endphp
 								</td>
 								<td>{{$a->phno}}</td>
+								@auth
+										<td><a href='/donordel/{{$a->id}}'><button type="button" class="btn btn-danger">
+												Delete
+										</button></a></td>
+								@endauth
 							</tr>
 							@endforeach
 				    </tbody>

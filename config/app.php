@@ -152,6 +152,7 @@ return [
          */
         Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
+        'Collective\Html\HtmlServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -210,6 +211,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Captcha' => \Buzz\LaravelGoogleCaptcha\CaptchaFacade::class,
+        'Form' => 'Collective\Html\FormFacade',
+        'HTML' => 'Collective\Html\HtmlFacade',
 
     ],
 

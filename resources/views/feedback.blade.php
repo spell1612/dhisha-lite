@@ -8,7 +8,8 @@
                 <div class="card-header">Feedback</div>
 
                 <div class="card-body">
-
+                  @php $i=1;
+          				@endphp
                     <div class="table-responsive users-table">
                         <table class="table table-striped table-condensed data-table">
                             <thead>
@@ -32,18 +33,17 @@
                                 @foreach($fbv as $user)
 
                                     <tr>
-                                        <td class="hidden-xs">{{$user->id}}</td>
+                                        <td class="hidden-xs">{{$i}} @php $i++; @endphp</td>
                                         <td class="hidden-xs">{{$user->name}}</td>
                                         <td class="hidden-xs"><a href="mailto:{{ $user->email }}" title="email {{ $user->email }}">{{ $user->email }}</a></td>
 
                                         <td class="hidden-xs">{{ $user->matter }}</td>
 
-                                        <td>
-                                        {!! Form::open(array('url' => 'delfeeb' . $user->id, 'class' => '', 'data-toggle' => 'tooltip', 'title' => 'Delete')) !!}
 
-                                          {!! Form::button('<i class="fa fa-trash-o fa-fw" aria-hidden="true"></i><span class="hidden-xs hidden-sm hidden-md"> Delete</span>', array('class' => 'btn btn-danger btn-sm','type' => 'button', 'style' =>'width: 100%;' ,'data-toggle' => 'modal', 'data-target' => '#confirmDelete', 'data-title' => 'Delete Feedback', 'data-message' => 'Are you sure you want to delete this feedback ?')) !!}
-                                        {!! Form::close() !!}
-                                        </td>
+                                          <td><a href='/readfb/delfb/{{$user->id}}'><button type="button" class="btn btn-danger">
+                      												Delete
+                      										</button></a></td>
+                                        
 
 
 

@@ -28,11 +28,12 @@ Route::post('getfeed','fbackController@getfeeb');
 Route::group(['middleware' => ['auth']], function () {
 
       Route::get('/readfb','fbdispController@putfeeb');
-      Route::post('/readfb/delfb/{id}','fbdispController@delfeeb');
+      Route::get('/readfb/delfb/{id}','fbdispController@delfeeb');
       Route::get('/bdenter', function () {
           return view('bdenter');
-      });
-
+      })->name('bdenter');
+      Route::get('/donoradmin','bdonoController@sndadmin')->name('donoradmin');
+      Route::get('/donordel/{id}','bdonoController@snddel')->name('donordel');
       Route::post('/bdenter/bdsub','bdinputController@getbdono')->name('bdsub');
       Route::get('/home', 'HomeController@index')->name('home');
 });
