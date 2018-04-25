@@ -18,9 +18,15 @@
   - dependancies can be defined in the composer.json file
 * From the root folder run `$ php artisan key:generate`
 * Migrate the db schema using `$ php artisan migrate` (make sure databse is running)
+* run `$ composer dump-autoload`
+* Seed default db values with `$ php artisan db:seed`
 * `$ php artisan serve` to run the app at localhost:8000
 
 
 Use the `Admin` Button at the Navigation section of the footer to access admin panel.(Or use `/home` route)
+
+Default Login creds
+email: `admin@admin.com`
+password: `adminpass`
 
 Give me a pull request if you wanna help add more features/fix bugs.
