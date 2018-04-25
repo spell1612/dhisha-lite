@@ -21,10 +21,6 @@
 * `$ php artisan serve` to run the app at localhost:8000
 
 
-<<<<<<< HEAD
 Use the `Admin` Button at the Navigation section of the footer to access admin panel.(Or use `/home` route)
-=======
-Use `/home` route to access admin panel. Register with any random credentials to login **for now**.
->>>>>>> 33686ad6b4bec4dcf26cb170d4f95ede23653e1c
 
 Give me a pull request if you wanna help add more features/fix bugs.

@@ -40,10 +40,14 @@
                                         <td class="hidden-xs">{{ $user->matter }}</td>
 
 
-                                          <td><a href='/readfb/delfb/{{$user->id}}'><button type="button" class="btn btn-danger">
+                                          <!-- <td><a href='/readfb/delfb/{{$user->id}}'><button type="button" class="btn btn-danger">
                       												Delete
-                      										</button></a></td>
-                                        
+                      										</button></a></td> -->
+                                          <td>
+                                            {{ Form::open([ 'method' => 'get', 'route' => ['delfeeb', $user->id ], 'onsubmit' => 'return ConfirmDelete()']) }}
+                                            {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+                                            {{ Form::close() }}
+                                          </td>
 
 
 

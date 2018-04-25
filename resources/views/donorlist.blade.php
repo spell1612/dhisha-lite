@@ -74,9 +74,9 @@
 								</td>
 								<td>{{$a->phno}}</td>
 								@auth
-										<td><a href='/donordel/{{$a->id}}'><button type="button" class="btn btn-danger">
-												Delete
-										</button></a></td>
+										<td>{{ Form::open([ 'method' => 'get', 'route' => ['donordel', $a->id ], 'onsubmit' => 'return ConfirmDelete()']) }}
+										{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+										{{ Form::close() }}</td>
 								@endauth
 							</tr>
 							@endforeach
@@ -86,7 +86,11 @@
 
 </div>
 
-
+<script>
+	function ConfirmDelete(){
+		return confirm('Are you sure?');
+	}
+</script>
 </body>
     <script type="text/javascript" src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bootstrap3/js/bootstrap.js') }}"></script>

@@ -28,7 +28,7 @@ Route::post('getfeed','fbackController@getfeeb');
 Route::group(['middleware' => ['auth']], function () {
 
       Route::get('/readfb','fbdispController@putfeeb');
-      Route::get('/readfb/delfb/{id}','fbdispController@delfeeb');
+      Route::get('/readfb/delfb/{id}','fbdispController@delfeeb')->name('delfeeb');
       Route::get('/bdenter', function () {
           return view('bdenter');
       })->name('bdenter');
