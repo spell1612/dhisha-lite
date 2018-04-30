@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome to the Dhisha Admin Panel
                 </div>
             </div>
         </div>

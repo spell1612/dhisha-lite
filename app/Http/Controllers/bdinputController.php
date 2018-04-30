@@ -4,6 +4,7 @@ namespace Dhisha\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Dhisha\donor;
+use Illuminate\Support\Facades\Redirect;
 
 class bdinputController extends Controller
 {
@@ -21,6 +22,8 @@ class bdinputController extends Controller
         $bd->place=$bdon->bdplace;
         $bd->phno=$bdon->bdphno;
         $bd->save();
+        flash('Save Successful!!')->success();
+
         return back();
     }
 

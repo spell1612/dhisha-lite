@@ -19,6 +19,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" data-bootloader-hash="29sAD" href="{{ asset('css/style.css') }}">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <script>
+    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    </script>
 </head>
 <body>
     <div id="app">
@@ -34,15 +39,28 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    @auth
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Admin <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                        <li><a class="nav-link" href="{{ URL::to('/home') }}">Home</a></li>
+                        <li><a class="nav-link" href="{{ URL::to('/readfb') }}">Read Feedback</a></li>
+                        <li><a class="nav-link" href="{{ URL::to('/bdenter') }}">Enter Blood Donor</a></li>
+                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('Create User') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('imgup') }}">{{ __('Upload to Gallery') }}</a></li>
+                        </ul>
+                    </li>
+                        @endauth
+                </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -71,5 +89,15 @@
             @yield('content')
         </main>
     </div>
+    <script>
+      function ConfirmDelete(){
+        return confirm('Are you sure?');
+      }
+    </script>
 </body>
 </html>
+<script>
+    $(document).ready(function(){
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+   });
+</script>

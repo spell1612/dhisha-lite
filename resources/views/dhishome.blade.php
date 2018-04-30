@@ -32,7 +32,7 @@
 	<link href="{{ asset('assets/css/gsdk.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/demo.css') }}" rel="stylesheet" />
 		<link href="{{ asset('css/logo.css') }}" rel="stylesheet" />
-
+      <link rel="stylesheet" type="text/css" data-bootloader-hash="29sAD" href="{{ asset('css/style.css') }}">
 		<!-- login links -->
 		<!-- <link href="{{ asset('login-register.css') }}" rel="stylesheet" />
 		<script src="{{ asset('login-register.js') }}" type="text/javascript"></script> -->
@@ -106,6 +106,9 @@
 								{{ csrf_field() }}
 						</form>
 						@endif -->
+            @auth
+            <li><a href="{{ route('home')}}" class="btn btn-round btn-default"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> ADMIN</a></li>
+            @endauth
 						<li><a href="#" class="btn btn-round btn-default" data-toggle="modal" data-target="#blModal"> <span class="glyphicon glyphicon-tint" aria-hidden="true"></span> Blood Donors</a></li>
 					</ul>
 
@@ -157,6 +160,25 @@
 										<option value="O-VE">O-</option>
 
 									</select>
+                  <label class="control-label">Location</label>
+                  <select placeholder="District" name="bgloc" class="form-control" required>
+                    <option disabled="" selected=""></option>
+                    <option value="...">Search All</option>
+                    <option value=AL>Alappuzha</option>
+                    <option value=ER>Ernakulam</option>
+                    <option value=ID>Idukki</option>
+                    <option value=KN>Kannur</option>
+                    <option value=KS>Kasaragod</option>
+                    <option value=KL>Kollam</option>
+                    <option value=KT>Kottayam</option>
+                    <option value=KZ>Kozhikode</option>
+                    <option value=MA>Malappuram</option>
+                    <option value=PL>Palakkad</option>
+                    <option value=PT>Pathanamthitta</option>
+                    <option value=TV>Thiruvananthapuram</option>
+                    <option value=TS>Thrissur</option>
+                    <option value=WA>Wayanad</option>
+                  </select>
 								</div>
 							</div>
 
@@ -196,7 +218,7 @@
 		<!-- blood donors modal ends -->
 
 		<!-- login form starts -->
-		
+
 		<!-- login form ends -->
 
     </div><!--  end container-->
@@ -223,7 +245,7 @@
 
 					<h1 class="heroh1">HELP CHANGE A CHILD'S LIFE</h1>
 					<div><p class="heropara">All children have the right to a healthy, happy and fulfilling life. Donate Money & Support Charity to Keep children safe & free from harm.
-						<br/><br/><a href='/donate' ><button class="btn btn-info btn-round btn-fill" >DONATE</button></a></p>
+						<!-- <br/><br/><a href='/donate' ><button class="btn btn-info btn-round btn-fill" >DONATE</button></a></p> -->
 					</p>
 					</div>
 
@@ -300,9 +322,7 @@
 											<h4 class="title text-center">പച</h4>
 											<p class="description" style="font-size: 13px;">മണ്ണും മനുഷ്യനുമായിട്ടുള്ള ബന്ധം വലിയ ഒരു സംസ്ക്കാരമായി തന്നെ നമുക്കിടയിൽ വളർന്നുവന്നിട്ടുള്ളതാണ് .പരസ്പര ആശ്രിതത്വത്തിന്റെ വലിയ സംസ്കാരം.അതിനെ മുറുകെ പിടിക്കാനാണ് പച്ച യുടെ ലക്ഷ്യം.</p>
 									</div>
-									<div class="text-center">
-											 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-									</div>
+									
 									<div class="filter"></div>
 							</div> <!-- end card -->
 					</div>
@@ -316,9 +336,9 @@
 												<h4 class="title text-center">ഇടo</h4>
 												<p class="description">സ്ത്രീക്കും പുരുഷനും തുല്യ അവകാശങ്ങളുള്ള സ്വന്തന്ത്രമായ പൊതുഇടങ്ങൾ എന്ന പ്രഖ്യാപനമാണ് ദിശയുടെ ഇടം എന്ന വിങ് .</p>
 										</div>
-										<div class="text-center">
+										<!-- <div class="text-center">
 												 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-										</div>
+										</div> -->
 										<div class="filter"></div>
 								</div> <!-- end card -->
 						</div>
@@ -332,9 +352,9 @@
 												<h4 class="title text-center">കൂട്ട്</h4>
 												<p class="description" style="font-size: 13px;">കളിച്ചു നടക്കേണ്ട പ്രായത്തിൽ തന്നെ വേദനകളോട് പൊരുതേണ്ടി വന്ന ഞങ്ങളുടെ കൂടെ പിറപ്പുകൾ .അവർക്ക് പണവും ഒരു പക്ഷെ അതിലുപരിയായി മുറുകെ പിടിക്കാൻ ഒരു കൈവിരലകനാണ് കൂട്ട് ശ്രമിക്കുന്നത് .</p>
 										</div>
-										<div class="text-center">
-												 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-										</div>
+									<!-- <div class="text-center">
+												<a href="#" class="btn btn-info btn-fill btn-round">More</a>
+									</div> -->
 										<div class="filter"></div>
 								</div> <!-- end card -->
 						</div>
@@ -352,21 +372,21 @@
 <section class="publicaciones-blog-home">
       <div class="container">
         <div class="">
-          <h2>News  <b>&<b> Blog</b></h2>
+          <h2>Gallery</h2>
           <div class="row-page row">
             <div class="col-page col-sm-8 col-md-6">
-              <a href="" class="black fondo-publicacion-home">
+              {{-- <a href="" class="black fondo-publicacion-home"> --}}
                 <div class="img-publicacion-principal-home">
-                  <img class="" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
+								<img class="" src="{{ asset('images/image1.jpg') }}">
                 </div>
-                <div class="contenido-publicacion-principal-home">
+                {{-- <div class="contenido-publicacion-principal-home">
                   <h3>Neque porro quisquam est qui dolorem ipsum</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
                 </div>
                 <div class="mascara-enlace-blog-home">
                   <span>Read More</span>
-                </div>
-              </a>
+                </div> --}}
+              {{-- </a> --}}
             </div>
             <div class="col-page col-sm-4 col-md-3">
               <a href=""  class="fondo-publicacion-home">
@@ -547,10 +567,13 @@
 																				<input type="email" class="form-control" name=fbemail placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address.">
 																				<p class="help-block text-danger"></p>
 																		</div>
-																		<div class="form-group">
-																				<div class="g-recaptcha" data-sitekey="6LetbxwUAAAAAPSFjCi2CCtRZMZoyIaP8jCTO9Mq"></div>
+																		<!-- <div class="form-group">
+                                      {!! Captcha::display( [
+                                                    'data-theme' => 'light',
+                                                    'data-type'	=>	'audio',
+                                              ]) !!}
 																				<p class="help-block text-danger"></p>
-																		</div>
+																		</div> -->
 																		<!-- <div class="form-group">
 																				<input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required="" data-validation-required-message="Please enter your phone number.">
 																				<p class="help-block text-danger"></p>
@@ -568,7 +591,7 @@
 																		<button type="submit" class="btn btn-fill btn-round btn-default">Send Message</button>
 																</div>
 														</div>
-
+                          	{{csrf_field()}}
 												</form>
 										</div>
 
@@ -630,11 +653,12 @@ Changuvetty, Kottakal</p>
 <div class="navigation">
 <h2 class="footer-title">Navigation</h2>
 <ul class="list-unstyled">
-	<li><a href="http://centerend.com/" title="">Home</a></li>
-	<li><a href="http://centerend.com/" title="">Donate</a></li>
-	<li><a href="http://centerend.com/" title="">Blood Donation</a></li>
-	<li><a href="http://centerend.com/" title="">News & Blog</a></li>
-	<li><a href="http://centerend.com/" title="">Contact Us</a></li>
+	<!-- <li><a href="/" title="">Home</a></li> -->
+	<!-- <li><a href="#Donate" title="">Donate</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">Blood Donation</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">News & Blog</a></li> -->
+	<!-- <li><a href="http://centerend.com/" title="">Contact Us</a></li> -->
+  <li><a href="{{ route('home') }}" title="">ADMIN</a></li>
 	<!-- <li><a href="http://centerend.com/" title="">Career</a></li>
 	<li><a href="http://centerend.com/" title="">Sitemap</a></li>
 	<li><a href="http://centerend.com/" title="">Contact Us</a></li> -->
@@ -663,7 +687,7 @@ Changuvetty, Kottakal</p>
 
 </body>
 
-		<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+		<!-- <script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script> -->
     <script src="{{ asset('jquery/jquery-1.10.2.js') }}" type="text/javascript"></script>
 	<script src="{{ asset('assets/js/jquery-ui-1.10.4.custom.min.js') }}" type="text/javascript"></script>
 
@@ -676,13 +700,13 @@ Changuvetty, Kottakal</p>
 	<script src="{{ asset('assets/js/hipster-cards.js') }}"></script>
 
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 	var CaptchaCallback = function() {
 		$('.g-recaptcha').each(function(index, el) {
 			grecaptcha.render(el, {'sitekey' : '6LetbxwUAAAAAPSFjCi2CCtRZMZoyIaP8jCTO9Mq'});
 		});
 	};
-	</script>
+	</script> -->
 
 <script type="text/javascript">
 
@@ -718,3 +742,8 @@ Changuvetty, Kottakal</p>
 
 </script>
 </html>
+<script>
+    $(document).ready(function(){
+    $('body').find('img[src$="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]').remove();
+   });
+</script>
