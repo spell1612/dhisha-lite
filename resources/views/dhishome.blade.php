@@ -322,9 +322,7 @@
 											<h4 class="title text-center">പച</h4>
 											<p class="description" style="font-size: 13px;">മണ്ണും മനുഷ്യനുമായിട്ടുള്ള ബന്ധം വലിയ ഒരു സംസ്ക്കാരമായി തന്നെ നമുക്കിടയിൽ വളർന്നുവന്നിട്ടുള്ളതാണ് .പരസ്പര ആശ്രിതത്വത്തിന്റെ വലിയ സംസ്കാരം.അതിനെ മുറുകെ പിടിക്കാനാണ് പച്ച യുടെ ലക്ഷ്യം.</p>
 									</div>
-									<div class="text-center">
-											 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-									</div>
+									
 									<div class="filter"></div>
 							</div> <!-- end card -->
 					</div>
@@ -338,9 +336,9 @@
 												<h4 class="title text-center">ഇടo</h4>
 												<p class="description">സ്ത്രീക്കും പുരുഷനും തുല്യ അവകാശങ്ങളുള്ള സ്വന്തന്ത്രമായ പൊതുഇടങ്ങൾ എന്ന പ്രഖ്യാപനമാണ് ദിശയുടെ ഇടം എന്ന വിങ് .</p>
 										</div>
-										<div class="text-center">
+										<!-- <div class="text-center">
 												 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-										</div>
+										</div> -->
 										<div class="filter"></div>
 								</div> <!-- end card -->
 						</div>
@@ -354,9 +352,9 @@
 												<h4 class="title text-center">കൂട്ട്</h4>
 												<p class="description" style="font-size: 13px;">കളിച്ചു നടക്കേണ്ട പ്രായത്തിൽ തന്നെ വേദനകളോട് പൊരുതേണ്ടി വന്ന ഞങ്ങളുടെ കൂടെ പിറപ്പുകൾ .അവർക്ക് പണവും ഒരു പക്ഷെ അതിലുപരിയായി മുറുകെ പിടിക്കാൻ ഒരു കൈവിരലകനാണ് കൂട്ട് ശ്രമിക്കുന്നത് .</p>
 										</div>
-										<div class="text-center">
-												 <a href="#" class="btn btn-info btn-fill btn-round">More</a>
-										</div>
+									<!-- <div class="text-center">
+												<a href="#" class="btn btn-info btn-fill btn-round">More</a>
+									</div> -->
 										<div class="filter"></div>
 								</div> <!-- end card -->
 						</div>
@@ -374,21 +372,21 @@
 <section class="publicaciones-blog-home">
       <div class="container">
         <div class="">
-          <h2>News  <b>&<b> Blog</b></h2>
+          <h2>Gallery</h2>
           <div class="row-page row">
             <div class="col-page col-sm-8 col-md-6">
-              <a href="" class="black fondo-publicacion-home">
+              {{-- <a href="" class="black fondo-publicacion-home"> --}}
                 <div class="img-publicacion-principal-home">
-                  <img class="" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
+								<img class="" src="{{ asset('images/image1.jpg') }}">
                 </div>
-                <div class="contenido-publicacion-principal-home">
+                {{-- <div class="contenido-publicacion-principal-home">
                   <h3>Neque porro quisquam est qui dolorem ipsum</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
                 </div>
                 <div class="mascara-enlace-blog-home">
                   <span>Read More</span>
-                </div>
-              </a>
+                </div> --}}
+              {{-- </a> --}}
             </div>
             <div class="col-page col-sm-4 col-md-3">
               <a href=""  class="fondo-publicacion-home">
