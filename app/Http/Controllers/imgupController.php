@@ -3,6 +3,9 @@
 namespace Dhisha\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Input;
+use Image;
+use Dhisha\pic;
 
 class imgupController extends Controller
 {
@@ -17,16 +20,19 @@ class imgupController extends Controller
         $this->validate($request, [
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-    
-    
-        $image = $request->file('image');
-        $input = 'image1.jpg';
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $input);
 
-        // $this->postImage->add($input);
 
-        return back()->with('success','Image Upload successful')->with('image',$input);;
+            $image = Input::file('image');
+            $filename  = time() . '.' . $image->getClientOriginalExtension();
+
+            $path = public_path('images/'. $filename);
+
+            Image::make($image->getRealPath())->resize(470, 480)->save($path);
+            $user= new pic;
+            $user->filename = $filename;
+            $user->save();
+
+        return back()->with('success','Image Upload successful')->with('image',$filename);
     }
-    
+
 }

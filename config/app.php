@@ -150,7 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
+        'Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider',
         Laracasts\Flash\FlashServiceProvider::class,
         'Collective\Html\HtmlServiceProvider',
         Intervention\Image\ImageServiceProvider::class,
@@ -216,7 +216,7 @@ return [
         'Form' => 'Collective\Html\FormFacade',
         'HTML' => 'Collective\Html\HtmlFacade',
         'Image' => Intervention\Image\Facades\Image::class,
-
+        'Input' => Illuminate\Support\Facades\Input::class,
     ],
 
 ];

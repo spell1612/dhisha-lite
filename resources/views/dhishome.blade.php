@@ -379,13 +379,21 @@
           <div class="row">
               <div class="col-sm-6" id="slider-thumbs">
                   <!-- Bottom switcher of slider -->
+                  @php $i=0;@endphp
                   <ul class="hide-bullets">
+                    @foreach($img as $image)
+                      @if($i>15)
+                        @php break;@endphp
+                      @else
                       <li class="col-sm-3">
-                          <a class="thumbnail" id="carousel-selector-0">
-                              <img src="http://placehold.it/150x150&text=zero">
+                          <a class="thumbnail" id="carousel-selector-{{$i}}">
+                              <img src="{{ asset('images/'.$image->filename) }}">
                           </a>
                       </li>
-
+                      @endif
+                      @php $i++; @endphp
+                    @endforeach
+<!--
                       <li class="col-sm-3">
                           <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/150x150&text=1"></a>
                       </li>
@@ -441,7 +449,7 @@
 
                       <li class="col-sm-3">
                           <a class="thumbnail" id="carousel-selector-15"><img src="http://placehold.it/150x150&text=15"></a>
-                      </li>
+                      </li> -->
                   </ul>
               </div>
               <div class="col-sm-6">
@@ -452,10 +460,21 @@
                               <div class="carousel slide" id="myCarousel">
                                   <!-- Carousel items -->
                                   <div class="carousel-inner">
-                                      <div class="active item" data-slide-number="0">
-                                          <img src="http://placehold.it/470x480&text=zero"></div>
-
-                                      <div class="item" data-slide-number="1">
+                                    <div class="active item" data-slide-number="0">
+                                        <img src="{{ asset('images/'.$img[0]->filename) }}"></div>
+                                    @php $i=0;@endphp
+                                    @foreach($img as $image)
+                                     @if($i==0)
+                                      @php $i++; continue;@endphp
+                                      @elseif($i>15)
+                                        @php break;@endphp
+                                      @else
+                                        <div class="item" data-slide-number="{{$i}}">
+                                            <img src="{{ asset('images/'.$image->filename) }}"></div>
+                                      @endif
+                                      @php $i++; @endphp
+                                    @endforeach
+                                      <!-- <div class="item" data-slide-number="1">
                                           <img src="http://placehold.it/470x480&text=1"></div>
 
                                       <div class="item" data-slide-number="2">
@@ -498,7 +517,7 @@
                                           <img src="http://placehold.it/470x480&text=14"></div>
 
                                       <div class="item" data-slide-number="15">
-                                          <img src="http://placehold.it/470x480&text=15"></div>
+                                          <img src="http://placehold.it/470x480&text=15"></div> -->
                                   </div>
                                   <!-- Carousel nav -->
                                   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

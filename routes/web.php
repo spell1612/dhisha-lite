@@ -12,9 +12,7 @@
 */
 
 //homepage route
-Route::get('/', function () {
-    return view('dhishome');
-});
+Route::get('/','welcomeController@show');
 
 //auth routes
 Auth::routes();
